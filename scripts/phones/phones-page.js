@@ -11,6 +11,8 @@ export default class PhonesPage {
 
     this._initViewer();
 
+
+
     this._catalog = new PhoneCatalog({
       element: document.querySelector('[data-component="phone-catalog"]'),
       phones: PhoneService.getPhones(),
@@ -52,10 +54,8 @@ export default class PhonesPage {
 
             <section>
                 <p>Shopping Cart</p>
-                <ul>
-                    <li>Phone 1</li>
-                    <li>Phone 2</li>
-                    <li>Phone 3</li>
+                <ul id="basket">
+               
                 </ul>
             </section>
         </div> 
