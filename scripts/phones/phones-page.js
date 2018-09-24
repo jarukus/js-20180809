@@ -11,6 +11,11 @@ export default class PhonesPage {
 
     this._initViewer();
 
+    // this._element.addEventListener("click", e =>
+    //       this._removeButton(e)
+    //   );
+
+
     this._catalog = new PhoneCatalog({
       element: document.querySelector('[data-component="phone-catalog"]'),
       phones: PhoneService.getPhones(),
@@ -22,6 +27,15 @@ export default class PhonesPage {
       }
     })
   }
+
+    // _removeButton(e) {
+    //     let removeButton = e.target.closest('[data-element="remove-button"]');
+    //     let container = document.getElementById('basket');
+    //     container.onclick = function(e) {
+    //         if (removeButton) return;
+    //         container.removeChild(newLi);
+    //                 }
+    // }
 
   _initViewer() {
     this._viewer = new PhoneViewer({
@@ -52,10 +66,7 @@ export default class PhonesPage {
 
             <section>
                 <p>Shopping Cart</p>
-                <ul>
-                    <li>Phone 1</li>
-                    <li>Phone 2</li>
-                    <li>Phone 3</li>
+                <ul id="basket">
                 </ul>
             </section>
         </div> 
